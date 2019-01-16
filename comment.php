@@ -33,6 +33,8 @@ $result = $bd->query('SELECT co.pseudo, co.date, co.commentaire, co.titre, c.nom
 ?>
 
 <h1 class="center">Liste des commentaires</h1>
+<br>
+
 
     <?php
         while ($recup = $result->fetch()) {

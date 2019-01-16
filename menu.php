@@ -42,7 +42,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="comment.php">Comment</a>
-          <a class="dropdown-item" href="#">Quantine</a>
+          <a class="dropdown-item" href="commenttri.php">Tri</a>
           <a class="dropdown-item" href="#">Personnel</a>
           <a class="dropdown-item" href="#">Economie</a>
         </div>
