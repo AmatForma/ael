@@ -19,6 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `entreprise`
 --
+DROP SCHEMA IF EXISTS entreprise; 
 CREATE DATABASE IF NOT EXISTS `entreprise` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `entreprise`;
 
