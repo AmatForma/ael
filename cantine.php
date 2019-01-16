@@ -1,4 +1,8 @@
+<head>
+<link rel="stylesheet" type="text/css" href="stylecantine.css" />
+</head>
 <body>
+
 <?php
 include("menu.php");
 
@@ -15,6 +19,23 @@ try {
 <div class="ouf">
 <br/>
 <br/>
+<div class="turfu">
+<br/>
+<br/>
+        
+        <div class="area">
+        <h1 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: rgb(0, 110, 255);">Raclette Enterprise</h1>
+        </div>
+        
+<br/>
+
+        <p style="color: blue;text-align: center">Version bêta du meilleur site ever !</p>
+<br/>
+        <img style="display: block; margin-left: auto; margin-right: auto; width: 50%;" 
+    src="https://www.ptitchef.com/imgupl/article/323.jpg">
+        
+
+</div>
 <h1 class="center">Menus de la semaine</h1>
 <br/>
 
