@@ -108,3 +108,24 @@ ALTER TABLE `comment`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+DROP TABLE IF EXISTS `employes`;
+CREATE TABLE IF NOT EXISTS `employes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(40) NOT NULL,
+  `prenom` varchar(25) NOT NULL,
+  `service` varchar(40) NOT NULL,
+  `date` date NOT NULL,
+  `age` int(11) NOT NULL,
+  `salaire` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `employes`
+--
+
+INSERT INTO `employes` (`id`, `nom`, `prenom`, `service`, `date`, `age`, `salaire`) VALUES
+(1, 'Charpentier', 'Antoine', 'Consultants', '2018-12-17', 26, 26000),
+(2, 'Dallau', 'William', 'Consultants', '2018-12-17', 24, 26000),
+(3, 'Singer', 'Antoine', 'Consultants', '2018-12-17', 25, 26000);
