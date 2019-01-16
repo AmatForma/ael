@@ -27,10 +27,10 @@ $result = $bd->query("SELECT * FROM annonces");
     <h1 style="background: black;
  font-family: Open Sans, Impact;
   text-align: center;
-  font-size: 6.5em;
-  color: #fff;
-  letter-spacing: -7px;
-  font-weight: 700;
+  font-size: 1000 em;
+  color: yellow;
+  letter-spacing: 60px;
+  font-weight: 6000;
   text-transform: uppercase;
   animation: blur .75s ease-out infinite;
   text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
@@ -52,7 +52,37 @@ $result = $bd->query("SELECT * FROM annonces");
       0px 10px 100px #7B96B8,
       0px -10px 100px #7B96B8,
       0px -10px 100px #7B96B8;">La liste des annonces </h1>
-    <table border="3" style=" text-align:center; color: yellow; background-color: black; margin: auto;width: 80%">
+      <br>
+      <br>
+      <br>
+    <table border="3" style=" background: black;
+ font-family: Open Sans, Impact;
+  text-align: center;
+  font-size: 10 em;
+  color: red;
+  letter-spacing: 2px;
+  font-weight: 10;
+  text-transform: uppercase;
+  animation: blur .75s ease-out infinite;
+  text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+    text-shadow:0px 0px 10px #fff,
+      0px 0px 10px #fff, 
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #7B96B8,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;; margin: auto;width: 80%">
     <tr>
     <th style=""> categorie </th>
     <th> date</th>
