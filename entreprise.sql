@@ -130,3 +130,22 @@ INSERT INTO `employes` (`id`, `nom`, `prenom`, `service`, `date`, `age`, `salair
 (1, 'Charpentier', 'Antoine', 'Consultants', '2018-12-17', 26, 26000),
 (2, 'Dallau', 'William', 'Consultants', '2018-12-17', 24, 26000),
 (3, 'Singer', 'Antoine', 'Consultants', '2018-12-17', 25, 26000);
+
+DROP TABLE IF EXISTS `annonces`;
+CREATE TABLE IF NOT EXISTS `annonces` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `categorie` varchar(20) NOT NULL,
+  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `resume` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `annonces`
+--
+
+INSERT INTO `annonces` (`id`, `categorie`, `date`, `resume`) VALUES
+(1, 'News', '2019-01-15 00:00:00', 'Raclette&Co Toronto ouvre sa première antenne.'),
+(2, 'Salon', '2019-01-14 00:00:00', 'Nous serons présents au forum Rhône-Alpes pour rencontrer les étudiants et leur présenter nos opportunités.'),
+(3, 'News', '2019-01-13 00:00:00', 'Elon Musk soutient publiquement Raclette&Co pour son projet de développement de raclette de poche.'),
+(9, 'News', '2019-01-16 09:28:39', 'Strasbourg relégué en ligue 2');

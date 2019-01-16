@@ -31,7 +31,7 @@
         <a class="nav-link" href="#">Quantine <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Annonce </a>
+        <a class="nav-link" href="annonces.php">Annonce </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="listeemployes.php">Employé </a>
