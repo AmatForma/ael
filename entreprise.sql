@@ -149,3 +149,38 @@ INSERT INTO `annonces` (`id`, `categorie`, `date`, `resume`) VALUES
 (2, 'Salon', '2019-01-14 00:00:00', 'Nous serons présents au forum Rhône-Alpes pour rencontrer les étudiants et leur présenter nos opportunités.'),
 (3, 'News', '2019-01-13 00:00:00', 'Elon Musk soutient publiquement Raclette&Co pour son projet de développement de raclette de poche.'),
 (9, 'News', '2019-01-16 09:28:39', 'Strasbourg relégué en ligue 2');
+
+DROP TABLE IF EXISTS `cantine`;
+CREATE TABLE IF NOT EXISTS `cantine` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Jour` varchar(10) NOT NULL,
+  `Menu` text NOT NULL,
+  `MenuVégé` text NOT NULL,
+  `Prix` int(11) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `cantine`
+--
+
+INSERT INTO `cantine` (`ID`, `Jour`, `Menu`, `MenuVégé`, `Prix`) VALUES
+(1, 'Lundi', 'Tartare de bœuf au couteau (250g) accompagné de ses petits légumes sauté à la poêle et de ses mannequins de pommes de terre sortis d\'un jacuzzi d\'huile bouillante.', 'Tartare de carotte enveloppé dans sa robe de poireau, accompagné par son charmant navet dans son jus d\'eau.', 12),
+(2, 'Mardi', 'Tendre magret de canard saignant, cuit dans son bain de graisse et concaténation de pommes de terre en rondelle cimentées par une béchamel onctueuse.', 'Farandole de quinoa, petits pois, avocat, et tout le tralala. Vinaigrette à l\'ancienne cousin.', 10),
+(3, 'Mercredi', 'Volaille en tranche recouvert de son manteau de raclette pour passer l\'hiver, en allant à la gravière. ', 'Pirouette et courbette de la courgette voulant aller plus haut que le haricot, mais qui se prend les pieds dans le chou et la fleur.', 15),
+(4, 'Jeudi', 'Tagliatelles au saumon c\'est vraiment trop bon, sauce beurre-citron on est pas con.', 'Blé et maïs pour Anaïs,\r\nPotiron et melon pour Chaton,\r\nPlus rien ensuite, il y a une fuite.', 13),
+(5, 'Vendredi', 'Vendredi tout est permis, maxi tacos triple viandes, salade, tomates, oignons, poivrons, raclette, sauce samouraï, blanche, ketchup, mayo, on s\'en fout d\'être gros.', 'Crêpe nature, on a plus de légumes, vous avez tout mangé, on est ruiné.', 10);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `suggestion`
+--
+
+DROP TABLE IF EXISTS `suggestion`;
+CREATE TABLE IF NOT EXISTS `suggestion` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Menu` text NOT NULL,
+  `MenuVege` text NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
