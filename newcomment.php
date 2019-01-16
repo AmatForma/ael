@@ -13,7 +13,14 @@ include("menu.php");
             <input class="form-control" type="text" name="titre" placeholder="Titre de votre commentaire" required="">
         </div>
         <div class="form-group">
-            <input class="form-control" type="number" name="categories_id" min="0" max="5" placeholder="Sélectionner la catégorie" required="">
+
+            <select name="categories_id">
+                <option value="1">Politique</option>
+                <option value="2">Economie</option>
+                <option value="3">Fonctionnement interne</option>
+                <option value="5">Nourriture</option>
+                <option value="4">Autre</option>
+            </select>
         </div>
         <div class="form-group">
             <input class="form-control" type="text" name="commentaire" placeholder="Rediger votre commentaire" required="">

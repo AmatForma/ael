@@ -20,7 +20,7 @@ if (       (!empty($_POST['nom']))
     $categories_id = $_POST['categories_id'];
     $commentaire = $_POST['commentaire'];
 
-    $sqlI = "INSERT INTO comment(nom, titre, categories_id, commentaire) VALUES(:nom, :titre, :categories_id, :commentaire)";
+    $sqlI = "INSERT INTO comment(pseudo, titre, categories_id, commentaire) VALUES(:nom, :titre, :categories_id, :commentaire)";
 
     $rec = $bd->prepare($sqlI);
     $rec->execute(array('nom' => $nom, 
@@ -29,13 +29,15 @@ if (       (!empty($_POST['nom']))
                         'commentaire' => $commentaire));
 }
 
-$result = $bd->query('SELECT * FROM comment');
+$result = $bd->query('SELECT co.pseudo, co.date, 
+    co.commentaire, co.titre, c.nom
+    FROM comment co INNER JOIN categories c
+    ON co.categories_id = c.id');
 ?>
 
 <h1 class="center">Liste des commentaires</h1>
 <table class="table" border="2" style="margin: auto;width: 70%">
     <tr>
-        <th>ID</th>
         <th>Nom</th>
         <th>Date</th>
         <th>Titre</th>
@@ -44,7 +46,7 @@ $result = $bd->query('SELECT * FROM comment');
     </tr>
     <?php
         while ($recup = $result->fetch()) {
-            echo "<tr><td>".$recup['id']."</td><td>".$recup['nom']."</td><td>".$recup['date']."</td><td>".$recup['titre']."</td><td>".$recup['categories_id']."</td><td>".$recup['commentaire']."</td></tr>";
+            echo "<tr><td>".$recup['pseudo']."</td><td>".$recup['date']."</td><td>".$recup['titre']."</td><td>".$recup['nom']."</td><td>".$recup['commentaire']."</td></tr>";
         }
     ?>
 </table>
