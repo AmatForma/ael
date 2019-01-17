@@ -1,6 +1,13 @@
 <?php 
 	include("menu.php");
+	session_start();
 
+	if (!empty($_POST['categories_id'])) {
+		$_SESSION['choix'] = $_POST['categories_id'];
+	}
+	else{
+		$_SESSION['choix'] = 1;
+	}
  ?>
 
  <br>
@@ -9,11 +16,11 @@
         <div style="margin: auto;width:30%">
         <div>
             <select class="btn btn-secondary dropdown-toggle" name="categories_id">
-            <option value="1">Politique</option>
-            <option value="2">Economie</option>
-            <option value="3">Fonctionnement interne</option>
-            <option value="5">Nourriture</option>
-            <option value="4">Autres</option>
+            <option value="1" <?php if($_SESSION['choix'] == 1){echo "selected";} ?>>Politique</option>
+            <option value="2" <?php if($_SESSION['choix'] == 2){echo "selected";} ?>>Economie</option>
+            <option value="3" <?php if($_SESSION['choix'] == 3){echo "selected";} ?>>Fonctionnement interne</option>
+            <option value="5" <?php if($_SESSION['choix'] == 5){echo "selected";} ?>>Nourriture</option>
+            <option value="4" <?php if($_SESSION['choix'] == 4){echo "selected";} ?>>Autres</option>
         </select>
         </div>
         <br>
@@ -33,6 +40,7 @@
     die('Erreur de ta faute '.$e->getMessage());
 }
 $choix = 1;
+
 
 	if (!empty($_POST['categories_id'])) {
 		$choix = $_POST['categories_id'];
